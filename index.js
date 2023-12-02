@@ -22,6 +22,11 @@ app.use(express.json());
 //apis
 app.use('/api/v1/call',callRouter)
 
+
+app.get('/',(req,res)=>{
+    res.send("Twilio call forwarding")
+})
+
 const port = process.env.PORT
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
