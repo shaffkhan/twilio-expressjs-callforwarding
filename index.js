@@ -23,7 +23,7 @@ app.use(express.json());
 app.use('/api/v1/call',callRouter)
 
 
-app.get('/',(req,res)=>{
+app.get('*',(req,res)=>{
     res.send("Twilio call forwarding")
 })
 
